@@ -4,7 +4,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ServiceSchema = Schema({
-    service_id: Number,
     description: Number,
     price: String
 });
