@@ -1,22 +1,20 @@
-"use strict";
+const express = require("express");
+const morgan = require("morgan");
+const app = express();
 
-const mongoose = require("mongoose");
-const app = require("../src/app");
+const { mongoose } = require('./database');
 
-//Starting the server
-mongoose.Promise = global.Promise;
-mongoose
-  .connect("mongodb://localhost:27017/GDH-crud", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  })
-  .then(() => {
-    console.log("DB is connected");
+// Settings
+app.set("port", process.env.PORT || 3000);
 
-    app.listen(app.get("port"), () => {
-      console.log("server on port", app.get("port"));
-    });
-  })
-  .catch((err) => console.log(err));
+// Middlewares
+app.use(morgan("dev"));
+app.use(express.json());
+
+// Routes
+app.use ('/api/users/', require('./routes/users.routes'));
+
+// Starting the Server
+app.listen(app.set("port"), () => {
+  console.log(`Server on port ${app.get("port")}`);
+});
