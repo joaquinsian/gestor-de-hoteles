@@ -4,7 +4,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var SeasonSchema = Schema({
-    season_id: Number,
     begin_date: String,
     end_date: String
 });
