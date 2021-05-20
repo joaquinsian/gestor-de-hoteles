@@ -4,7 +4,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ExpensesSchemna = Schema({
-    Expenses_id: Number,
     amount: Number,
     price: String,
     Reservation_id: { type: Schema.ObjectId, ref: 'Reservation'},
