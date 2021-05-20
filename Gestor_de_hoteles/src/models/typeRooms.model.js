@@ -4,7 +4,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var typeRoom_Schema = Schema ({
-    typeRoom_id: Number,
     description: String
 });
 
