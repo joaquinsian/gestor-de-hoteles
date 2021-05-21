@@ -12,7 +12,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 // Routes
-app.use ('/api/users/', require('./routes/users.routes'));
+app.use ('/api/users/', require('./routes/prueba.routes'));
 
 // Starting the Server
 app.listen(app.set("port"), () => {

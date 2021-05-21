@@ -1,11 +1,11 @@
-'use strict'
+"use strict";
 
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-var SeasonSchema = Schema({
-    begin_date: String,
-    end_date: String
+const SeasonSchema = new Schema({
+  beginDate: { type: Date, default: Date.now, required: true },
+  finalDate: { type: Date, default: Date.now, required: true },
 });
 
-module.exports = mongoose.model('Season', SeasonSchema);
+module.exports = mongoose.model("Season", SeasonSchema);

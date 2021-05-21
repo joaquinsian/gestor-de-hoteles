@@ -1,11 +1,11 @@
-'use strict'
+"use strict";
 
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-var ServiceSchema = Schema({
-    description: Number,
-    price: String
+const ServiceSchema = new Schema({
+  description: { type: String, required: true },
+  price: { type: Number, required: true, trim: true },
 });
 
-module.exports = mongoose.module('Service', ServiceSchema);
+module.exports = mongoose.module("Service", ServiceSchema);

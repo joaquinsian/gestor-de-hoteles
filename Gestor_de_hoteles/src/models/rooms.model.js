@@ -1,11 +1,11 @@
-'use strict'
+"use strict";
 
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-var RoomSchema = Schema({
-    stock: Number,
-    type_room_id: { type: Schema.ObjetId, ref:'typeroom'}
+const RoomSchema = new Schema({
+  stock: { type: Number, required: true, trim: true },
+  typeRoomId: { type: Schema.ObjetId, ref: "Typeroom" },
 });
- 
-module.exports = mongoose.model('Room', RoomSchema);
+
+module.exports = mongoose.model("Room", RoomSchema);

@@ -1,14 +1,14 @@
-'use strict'
+"use strict";
 
-const mongoose = require('mongoose')
-var Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-var UsersSchema = new Schema({
-    name: String,
-    last_name: String,
-    email: String,
-    password: String,
-    rol: String
+const UsersSchema = new Schema({
+  name: { type: String, required: true, trim: true },
+  lastName: { type: String, required: true, trim: true },
+  email: { type: String, required: true, trim: true },
+  password: { type: String, required: true, trim: true },
+  rol: { type: String, required: true, trim: true },
 });
 
-module.exports = mongoose.model('Users', UsersSchema);
+module.exports = mongoose.model("Users", UsersSchema);

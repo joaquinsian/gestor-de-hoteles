@@ -1,14 +1,14 @@
-'use strict'
+"use strict";
 
 const mongoose = require("mongoose");
-var Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
-var ReservationSchema = new Schema({
-    begin_date: String,
-    end_date: String,
-    room_id: { type: Schema.ObjectId, ref: 'Room'},
-    event_id: { type: Schema.ObjectId, ref:'Event'},
-    user_id: { type: Schema.ObjetctId, ref: 'User'}
+const ReservationSchema = new Schema({
+  beginDate: { type: Date, default: Date.now, required: true },
+  finalDate: { type: Date, default: Date.now, required: true },
+  roomId: { type: Schema.ObjectId, ref: "Room" },
+  eventId: { type: Schema.ObjectId, ref: "Event" },
+  userId: { type: Schema.ObjetctId, ref: "Users" },
 });
- 
-module.exports = mongoose.model('Reservation', ReservationSchema);
+
+module.exports = mongoose.model("Reservation", ReservationSchema);

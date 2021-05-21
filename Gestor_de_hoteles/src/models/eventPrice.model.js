@@ -1,11 +1,11 @@
-'use strict'
+"use strict";
 
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-var eventPrice_Schema = Schema({
-    price: String,
-    type_Event_id: { type: Schema.ObjectId, ref: 'typeEvent'}
+const EventPriceSchema = new Schema({
+  price: { type: Number, required: true, trim: true },
+  tipeEventId: { type: Schema.ObjectId, ref: "TypeEvent" },
 });
 
-module.exports = mongoose.model('eventPrice', eventPrice_Schema);
+module.exports = mongoose.model("EventPrice", EventPriceSchema);
