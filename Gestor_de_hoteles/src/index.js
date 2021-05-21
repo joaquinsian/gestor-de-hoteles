@@ -12,7 +12,9 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 // Routes
-app.use ('/api/users/', require('./routes/prueba.routes'));
+app.use ('/api/user/', require('./routes/prueba.routes'));
+app.use ('/api/auth/', require('./routes/auth.routes'));
+//app.use ('/api/users', require('./controllers/auth.controller'));
 
 // Starting the Server
 app.listen(app.set("port"), () => {
