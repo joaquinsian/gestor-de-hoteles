@@ -1,8 +1,11 @@
 const express = require("express");
 const morgan = require("morgan");
-const app = express();
 
-const { mongoose } = require('./database');
+const { mongoose } = require("./database");
+const { createRoles } = require("./libs/initialSetup");
+
+const app = express();
+createRoles();
 
 // Settings
 app.set("port", process.env.PORT || 3000);
@@ -12,8 +15,8 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 // Routes
-app.use ('/api/user/', require('./routes/prueba.routes'));
-app.use ('/api/auth/', require('./routes/auth.routes'));
+app.use("/api/user/", require("./routes/prueba.routes"));
+app.use("/api/auth/", require("./routes/auth.routes"));
 //app.use ('/api/users', require('./controllers/auth.controller'));
 
 // Starting the Server
