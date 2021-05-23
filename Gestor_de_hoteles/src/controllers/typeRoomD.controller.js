@@ -1,13 +1,15 @@
-'use strict'
+"use strict";
 
-import typeRoom from "../models/typeRooms.model";
+const typeRoom = require("../models/typeRooms.model");
+const TpRoomCtrl = {};
 
-export const createtypeRoom = async (req, res) => {
-  const { description } = req.body;
+TpRoomCtrl.createTypeRoom = async (req, res) => {
+  const { description, name } = req.body;
 
   try {
     const newtypeRoom = new typeRoom({
-      description
+      name,
+      description,
     });
 
     const typeRoomSaved = await newtypeRoom.save();
@@ -18,3 +20,5 @@ export const createtypeRoom = async (req, res) => {
     return res.status(500).json(error);
   }
 };
+
+module.exports = TpRoomCtrl;
