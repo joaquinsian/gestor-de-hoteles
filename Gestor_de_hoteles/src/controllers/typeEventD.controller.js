@@ -1,8 +1,9 @@
 'use strict'
 
-import typeEvent from "../models/typeEvents.model";
+const typeEvent = require("../models/typeEvents.model");
+const TpEventCtrl = {};
 
-export const createtypeEvent = async (req, res) => {
+TpEventCtrl.createtypeEvent = async (req, res) => {
   const { description } = req.body;
 
   try {
@@ -18,3 +19,5 @@ export const createtypeEvent = async (req, res) => {
     return res.status(500).json(error);
   }
 };
+
+module.exports = TpEventCtrl;
