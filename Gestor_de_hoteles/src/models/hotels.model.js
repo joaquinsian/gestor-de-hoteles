@@ -10,4 +10,4 @@ const HotelSchema = new Schema({
   roomId: { type: Schema.ObjectId, ref: "Room" },
 });
 
-module.exports = mongoose.module("Hotel", HotelSchema);
+module.exports = mongoose.model("Hotel", HotelSchema);
