@@ -1,8 +1,8 @@
 'use strict'
+const Season = require("../models/season.model");
+const SeasonCtrl = {};
 
-import Season from "../models/season.model";
-
-export const createSeason = async (req, res) => {
+SeasonCtrl.createSeason = async (req, res) => {
   const { beginDate, finalDate } = req.body;
 
   try {
@@ -19,3 +19,5 @@ export const createSeason = async (req, res) => {
     return res.status(500).json(error);
   }
 };
+
+module.exports = SeasonCtrl

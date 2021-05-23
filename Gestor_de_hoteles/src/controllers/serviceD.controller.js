@@ -1,8 +1,10 @@
 'use strict'
 
-import Service from "../models/services.model";
+const Service = require("../models/services.model");
+const ServiceCtrl = {};
+ 
 
-export const createService = async (req, res) => {
+ServiceCtrl.createService = async (req, res) => {
   const { description, price } = req.body;
 
   try {
@@ -19,3 +21,5 @@ export const createService = async (req, res) => {
     return res.status(500).json(error);
   }
 };
+
+module.exports = ServiceCtrl
