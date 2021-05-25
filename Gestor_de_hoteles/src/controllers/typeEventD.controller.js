@@ -1,13 +1,14 @@
 'use strict'
 
 const typeEvent = require("../models/typeEvents.model");
-const TpEventCtrl = {};
+const TpEventCtrl = {}; 
 
 TpEventCtrl.createtypeEvent = async (req, res) => {
-  const { description } = req.body;
+  const { name, description } = req.body;
 
   try {
     const newtypeEvent = new typeEvent({
+      name,
       description
     });
 

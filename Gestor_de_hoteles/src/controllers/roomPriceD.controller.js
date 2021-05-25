@@ -1,8 +1,9 @@
 'use strict'
 
-import roomPrice from "../models/roomPrices.model";
+const roomPrice = require("../models/roomPrices.model");
+const roomPriceCtrl = {};
 
-export const createroomPrice = async (req, res) => {
+roomPriceCtrl.createroomPrice = async (req, res) => {
   const { price, typeRoomId, seasonId } = req.body;
 
   try {
@@ -28,3 +29,5 @@ export const createroomPrice = async (req, res) => {
     return res.status(500).json(error);
   }
 };
+
+module.exports = roomPriceCtrl;

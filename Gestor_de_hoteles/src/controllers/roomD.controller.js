@@ -1,8 +1,9 @@
 'use strict'
 
-import Room from "../models/rooms.model";
+const Room = require("../models/rooms.model");
+const RoomCtrl = {};
 
-export const createRoom = async (req, res) => {
+RoomCtrl.createRoom = async (req, res) => {
   const { stock, typeRoomId } = req.body;
 
   try {
@@ -23,3 +24,5 @@ export const createRoom = async (req, res) => {
     return res.status(500).json(error);
   }
 };
+
+module.exports = RoomCtrl;

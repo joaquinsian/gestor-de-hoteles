@@ -26,13 +26,3 @@ EPriceCtrl.createeventPrice = async (req, res) => {
 };
 
 module.exports = EPriceCtrl;
-
-
-
-
-
-
-
-
-
-

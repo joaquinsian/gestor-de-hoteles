@@ -1,16 +1,16 @@
-"use strict";
+"use strict"
 
 const typeRoom = require("../models/typeRooms.model");
 const TpRoomCtrl = {};
 
 TpRoomCtrl.createTypeRoom = async (req, res) => {
-  const { description, name } = req.body;
+  const { name , description } = req.body;
 
   try {
     const newtypeRoom = new typeRoom({
       name,
-      description,
-    });
+      description 
+   }); 
 
     const typeRoomSaved = await newtypeRoom.save();
 

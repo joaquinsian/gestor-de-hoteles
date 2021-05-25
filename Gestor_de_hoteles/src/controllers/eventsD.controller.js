@@ -1,8 +1,9 @@
 'use strict'
 
-import Event from "../models/events.mode";
+const Event = require("../models/events.mode");
+const EventCtrl = {};
 
-export const createEvent = async (req, res) => {
+EventCtrl.createEvent = async (req, res) => {
   const { tipeEventId } = req.body;
 
   try {
@@ -24,9 +25,4 @@ export const createEvent = async (req, res) => {
   }
 };
 
-
-
-
-
-
-
+module.exports = EventCtrl

@@ -1,8 +1,9 @@
 'use strict'
 
-import Expense from "../models/expenses.model";
+const Expenses = require("../models/expenses.model");
+const ExpensesCtrl = {};
 
-export const createExpense = async (req, res) => {
+ExpensesCtrl.createExpense = async (req, res) => {
   const { amount, price, reservationId, serviceId } = req.body;
 
   try {
@@ -29,3 +30,5 @@ export const createExpense = async (req, res) => {
     return res.status(500).json(error);
   }
 };
+
+module.exports = ExpensesCtrl;

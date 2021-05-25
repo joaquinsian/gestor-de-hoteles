@@ -21,3 +21,4 @@ SeasonCtrl.createSeason = async (req, res) => {
 };
 
 module.exports = SeasonCtrl
+ 

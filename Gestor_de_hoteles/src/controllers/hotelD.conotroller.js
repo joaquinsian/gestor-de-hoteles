@@ -1,8 +1,9 @@
 'use strict'
 
-import Hotel from "../models/hotels.model";
+const Hotel = require("../models/hotels.model");
+const HotelCtrl = {};
 
-export const createHotel = async (req, res) => {
+HotelCtrl.createHotel = async (req, res) => {
   const { name, description, eventId, roomId } = req.body;
 
   try {
@@ -29,3 +30,5 @@ export const createHotel = async (req, res) => {
     return res.status(500).json(error);
   }
 };
+
+module.exports = HotelCtrl;

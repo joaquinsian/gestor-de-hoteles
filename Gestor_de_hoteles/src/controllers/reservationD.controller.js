@@ -1,8 +1,9 @@
 'use strict'
 
-import Reservation from "../models/reservations.models";
+const Reservation = require("../models/reservations.models");
+const ReservationCtrl = {};
 
-export const createReservation = async (req, res) => {
+ReservationCtrl.createReservation = async (req, res) => {
   const { beginDate, finalDate, roomId, eventId, userId} = req.body;
   try {
     const newReservation = new Reservation({
@@ -35,3 +36,5 @@ export const createReservation = async (req, res) => {
     return res.status(500).json(error);
   }
 };
+
+module.exports = ReservationCtrl;
