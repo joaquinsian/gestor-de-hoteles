@@ -1,18 +1,18 @@
 'use strict'
 
-import eventPrice from "../models/eventPrice.model";
+const eventPrice = require("../models/eventPrice.model"); 
+const EPriceCtrl = {};
 
-export const createeventPrice = async (req, res) => {
-  const { price, tipeEventId } = req.body;
+EPriceCtrl.createeventPrice = async (req, res) => {
+  const { price, typeEventId } = req.body;
 
   try {
     const neweventPrice = new eventPrice({
       price
-
     });
 
     if(req.body.typeEventId) {
-      const foundetipeEv = await tipeEventId.find({ name:{ $in: typeEventId}});
+      const foundetipeEv = await typeEventId.find({ name:{ $in: typeEventId}});
       neweventPrice.typeEventId = foundetipeEv.map((typeEventid)=> typeEventid._id);
     }
 
@@ -24,6 +24,9 @@ export const createeventPrice = async (req, res) => {
     return res.status(500).json(error);
   }
 };
+
+module.exports = EPriceCtrl;
+
 
 
 
