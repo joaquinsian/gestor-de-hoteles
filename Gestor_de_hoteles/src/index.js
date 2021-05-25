@@ -18,8 +18,9 @@ app.use ('/api/auth/', require('./routes/auth.routes'));
 // inyeccion de datos
 app.use ('/api/TRoom/',require('./routes/data.routes'));
 app.use ('/api/TEvent/', require('./routes/data.routes'));
-app.use ('/api/ServiceD', require('./routes/data.routes'));
-app.use ('/api/SeasonD', require('./routes/data.routes'));
+app.use ('/api/ServiceD/', require('./routes/data.routes'));
+app.use ('/api/SeasonD/', require('./routes/data.routes'));
+app.use ('/api/EPriceD/', require('./routes/data.routes'));
 //app.use ('/api/users', require('./controllers/auth.controller'));
 
 // Starting the Server
