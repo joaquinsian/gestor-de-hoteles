@@ -16,7 +16,7 @@ EPriceCtrl.createeventPrice = async (req, res) => {
       neweventPrice.typeEventId = foundetipeEv.map((typeEventid)=> typeEventid._id);
     }
 
-    const eventpriceSaved = await neweventprice.save();
+    const eventpriceSaved = await neweventPrice.save();
 
     res.status(201).json(eventpriceSaved);
   } catch (error) {

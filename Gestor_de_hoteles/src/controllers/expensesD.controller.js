@@ -1,11 +1,11 @@
 'use strict'
 
-const Expenses = require("../models/expenses.model");
+const Expense = require("../models/expenses.model");
 const ExpensesCtrl = {};
 
 ExpensesCtrl.createExpense = async (req, res) => {
   const { amount, price, reservationId, serviceId } = req.body;
-
+ 
   try {
     const newExpense = new Expense({
         amount,

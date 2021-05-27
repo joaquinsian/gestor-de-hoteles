@@ -1,4 +1,3 @@
-  
 "use strict";
 
 const mongoose = require("mongoose");
@@ -7,7 +6,7 @@ const bcrypt = require("bcryptjs");
 
 const UserSchema = new Schema(
   {
-    name: { type: String, required: true, trim: true },
+    name: { type: String, required: true, trim: true }, 
     lastName: { type: String, required: true, trim: true },
     userName: { type: String, required: true, trim: true },
     email: { type: String, required: true, trim: true },

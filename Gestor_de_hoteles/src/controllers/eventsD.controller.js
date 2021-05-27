@@ -4,15 +4,15 @@ const Event = require("../models/events.mode");
 const EventCtrl = {};
 
 EventCtrl.createEvent = async (req, res) => {
-  const { tipeEventId } = req.body;
-
+  const { typeEventId } = req.body;
+ 
   try {
     const newEvent = new Event({
       
     });
 
     if(req.body.typeEventId) {
-      const foundetipeEv = await tipeEventId.find({ name:{ $in: typeEventId}});
+      const foundetipeEv = await typeEventId.find({ name:{ $in: typeEventId}});
       newEvent.typeEventId = foundetipeEv.map((typeEventid)=> typeEventid._id);
     }
 

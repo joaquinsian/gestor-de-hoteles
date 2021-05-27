@@ -8,8 +8,7 @@ ReservationCtrl.createReservation = async (req, res) => {
   try {
     const newReservation = new Reservation({
         beginDate,
-        finalDate,
-        
+        finalDate    
     });
 
     if(req.body.roomId) {

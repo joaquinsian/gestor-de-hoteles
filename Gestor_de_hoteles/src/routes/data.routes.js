@@ -12,10 +12,10 @@ const EventsD = require('../controllers/eventsD.controller');
 const ExpensesD = require('../controllers/expensesD.controller');
 const HotelD = require('../controllers/hotelD.conotroller');
 const ReservationD = require('../controllers/reservationD.controller');
-const roomPriceD = require('../controllers/roomPriceD.controller');
+const RoomPriceD = require('../controllers/roomPriceD.controller');
 const RoomD = require('../controllers/roomD.controller');
 
-
+                       
 router.post('/typeRoom', typeRoomD.createTypeRoom);
 router.post('/typeEvent', typeEventD.createtypeEvent);
 router.post('/Service', ServiceD.createService);

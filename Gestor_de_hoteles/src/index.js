@@ -8,7 +8,7 @@ const { mongoose } = require('./database');
 app.set("port", process.env.PORT || 3000);
 
 // Middlewares
-app.use(morgan("dev"));
+app.use(morgan("dev")); 
 app.use(express.json());
 
 // Routes
@@ -28,10 +28,16 @@ app.use ('/api/ReservationD/', require('./routes/data.routes'));
 app.use ('/api/RoomPriceD/', require('./routes/data.routes'));
 app.use ('/api/RoomD/', require('./routes/data.routes'));
 
+//funciones generales
+
+app.use ('/api/ViewHotel/', require('./routes/usersFunctions.routes'));
+
+
+
+
 //app.use ('/api/users', require('./controllers/auth.controller'));
 
 // Starting the Server
 app.listen(app.set("port"), () => {
   console.log(`Server on port ${app.get("port")}`);
 });
-
