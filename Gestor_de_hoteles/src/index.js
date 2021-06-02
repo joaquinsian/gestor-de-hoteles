@@ -17,7 +17,9 @@ app.use(express.json());
 // Routes
 app.use("/api/auth/", require("./routes/auth.routes"));
 app.use("/api/season/", require("./routes/season.routes"));
-//app.use ('/api/users', require('./controllers/auth.controller'));
+app.use("/api/service/", require("./routes/services.routes"));
+app.use("/api/typeRoom/", require("./routes/typeRooms.routes"));
+app.use("/api/typeEvent/", require("./routes/typeEvents.routes"));
 
 // Starting the Server
 app.listen(app.set("port"), () => {

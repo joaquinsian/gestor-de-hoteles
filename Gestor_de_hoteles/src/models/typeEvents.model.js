@@ -8,4 +8,4 @@ const TypeEventSchema = new Schema({
   description: { type: String, required: true },
 });
 
-module.exports = mongoose.module("TypeEvent", TypeEventSchema);
+module.exports = mongoose.model("TypeEvent", TypeEventSchema);

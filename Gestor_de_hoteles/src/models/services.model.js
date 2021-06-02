@@ -8,4 +8,4 @@ const ServiceSchema = new Schema({
   price: { type: Number, required: true, trim: true },
 });
 
-module.exports = mongoose.module("Service", ServiceSchema);
+module.exports = mongoose.model("Service", ServiceSchema);
