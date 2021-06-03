@@ -22,6 +22,11 @@ app.use("/api/typeRoom/", require("./routes/typeRooms.routes"));
 app.use("/api/typeEvent/", require("./routes/typeEvents.routes"));
 app.use("/api/eventPrice/", require("./routes/eventPrice.routes"));
 app.use("/api/roomPrice/", require("./routes/roomPrices.routes"));
+app.use("/api/room/", require("./routes/rooms.routes"));
+app.use("/api/event/", require("./routes/events.routes"));
+app.use("/api/hotel/", require("./routes/hotels.routes"));
+app.use("/api/reservation", require("./routes/reservations.routes"));
+app.use("/api/expense", require("./routes/expenses.routes"));
 
 // Starting the Server
 app.listen(app.set("port"), () => {

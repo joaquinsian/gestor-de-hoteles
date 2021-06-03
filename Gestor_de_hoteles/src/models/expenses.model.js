@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 
 const ExpenseSchemna = new Schema({
   amount: { type: Number, required: true, trim: true },
-  price: { type: String, required: true, trim: true },
+  price: { type: Number, required: true, trim: true },
   reservationId: { type: Schema.ObjectId, ref: "Reservation" },
   serviceId: { type: Schema.ObjectId, ref: "Service" },
 });
