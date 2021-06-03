@@ -38,7 +38,7 @@ TypeEventCtrl.getTypeEventById = async (req, res) => {
   res.status(200).json(typeEvent);
 };
 
-// Update Tyoe Event for Id
+// Update Type Event for Id
 TypeEventCtrl.updateTypeEventById = async (req, res) => {
   const updateTypeEvent = await TypeEvent.findByIdAndUpdate(
     req.params.typeEventId,

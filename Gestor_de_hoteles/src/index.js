@@ -20,6 +20,8 @@ app.use("/api/season/", require("./routes/season.routes"));
 app.use("/api/service/", require("./routes/services.routes"));
 app.use("/api/typeRoom/", require("./routes/typeRooms.routes"));
 app.use("/api/typeEvent/", require("./routes/typeEvents.routes"));
+app.use("/api/eventPrice/", require("./routes/eventPrice.routes"));
+app.use("/api/roomPrice/", require("./routes/roomPrices.routes"));
 
 // Starting the Server
 app.listen(app.set("port"), () => {
