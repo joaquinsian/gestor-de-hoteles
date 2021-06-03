@@ -8,7 +8,7 @@ const ReservationSchema = new Schema({
   finalDate: { type: String /*Date, default: Date.now*/, required: true },
   roomId: { type: Schema.ObjectId, ref: "Room" },
   eventId: { type: Schema.ObjectId, ref: "Event" },
-  userId: { type: Schema.ObjetctId, ref: "User" },
+  userId: { type: Schema.ObjectId, ref: "User" },
 });
 
 module.exports = mongoose.model("Reservation", ReservationSchema);
